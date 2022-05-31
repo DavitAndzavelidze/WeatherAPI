@@ -119,6 +119,7 @@ header i {
 }
 .wrapper.active .weather-part {
   display: flex;
+  transition: all 0.3s ease-in;
 }
 .weather-part img {
   max-width: 125px;
@@ -190,20 +191,4 @@ header i {
 .details p {
   font-size: 14px;
   margin-top: -6px;
-}
-.copyright {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  font-weight: 300;
-  font-size: 14px;
-}
-@media (max-width: 414px) {
-  .copyright {
-    display: flex;
-  }
 }
