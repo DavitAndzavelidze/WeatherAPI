@@ -58,22 +58,22 @@ function weatherDetails(info) {
 
     if (id == 800) {
       wIcons.src = "images/clear-day.svg";
-      bgImage.src = "images/sunny.jpg";
+      bgImage.src = "images/sunny.webp";
     } else if (id >= 200 && id <= 232) {
       wIcons.src = "images/thunderstorms-day.svg";
-      bgImage.src = "images/thunderstorm.jpg";
+      bgImage.src = "images/thunderstorm.webp";
     } else if (id >= 600 && id <= 622) {
       wIcons.src = "images/partly-cloudy-day-snow.svg";
-      bgImage.src = "images/snow.jpg";
+      bgImage.src = "images/snow.webp";
     } else if (id >= 701 && id <= 781) {
       wIcons.src = "images/partly-cloudy-day-haze.svg";
-      bgImage.src = "images/haze.jpg";
+      bgImage.src = "images/haze.webp";
     } else if (id >= 801 && id <= 804) {
       wIcons.src = "images/partly-cloudy-day.svg";
-      bgImage.src = "images/cloudy.jpg";
+      bgImage.src = "images/cloud.webp";
     } else if ((id >= 300 && id <= 321) || (id >= 500 && id <= 531)) {
       wIcons.src = "images/partly-cloudy-day-rain.svg";
-      bgImage.src = "images/rain.jpg";
+      bgImage.src = "images/rain.webp";
     }
 
     wrapper.querySelector(".temp .num").innerText = Math.floor(temp);
