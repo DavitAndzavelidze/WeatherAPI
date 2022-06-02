@@ -4,6 +4,7 @@ const wrapper = document.querySelector(".wrapper"),
   inputField = inputPart.querySelector("input"),
   locationBtn = inputPart.querySelector("button"),
   wIcons = wrapper.querySelector(".weather-part img"),
+  bgImage = document.querySelector(".background__image"),
   arrowBack = wrapper.querySelector("header i");
 
 const apiKey = "2381a50b991311bd15f0406491caab60";
@@ -57,16 +58,22 @@ function weatherDetails(info) {
 
     if (id == 800) {
       wIcons.src = "images/clear-day.svg";
+      bgImage.src = "images/sunny.jpg";
     } else if (id >= 200 && id <= 232) {
       wIcons.src = "images/thunderstorms-day.svg";
+      bgImage.src = "images/thunderstorm.jpg";
     } else if (id >= 600 && id <= 622) {
       wIcons.src = "images/partly-cloudy-day-snow.svg";
+      bgImage.src = "images/snow.jpg";
     } else if (id >= 701 && id <= 781) {
       wIcons.src = "images/partly-cloudy-day-haze.svg";
+      bgImage.src = "images/haze.jpg";
     } else if (id >= 801 && id <= 804) {
       wIcons.src = "images/partly-cloudy-day.svg";
+      bgImage.src = "images/cloudy.jpg";
     } else if ((id >= 300 && id <= 321) || (id >= 500 && id <= 531)) {
       wIcons.src = "images/partly-cloudy-day-rain.svg";
+      bgImage.src = "images/rain.jpg";
     }
 
     wrapper.querySelector(".temp .num").innerText = Math.floor(temp);
@@ -77,9 +84,11 @@ function weatherDetails(info) {
 
     infoTxt.classList.remove("pending", "error");
     wrapper.classList.add("active");
+    bgImage.classList.add("active");
   }
 }
 
 arrowBack.addEventListener("click", () => {
   wrapper.classList.remove("active");
+  bgImage.classList.remove("active");
 });
